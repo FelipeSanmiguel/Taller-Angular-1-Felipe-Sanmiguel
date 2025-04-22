@@ -24,7 +24,9 @@ export class SerieComponent implements OnInit {
   }
 
   selectSerie(serie: Serie): void {
+    console.log("Selected Serie Object:", serie);
     this.selectedSerie = serie;
+    console.log("Selected Series Image URL:", this.selectedSerie.poster);
   }
 
   calcularPromedio() {
@@ -32,7 +34,6 @@ export class SerieComponent implements OnInit {
       this.promedio += this.series[i].seasons;
     }
     this.promedio = this.promedio / this.series.length;
-    console.log(this.promedio);
   }
 
   ngOnInit() {

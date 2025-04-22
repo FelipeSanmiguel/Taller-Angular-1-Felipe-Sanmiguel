@@ -26,11 +26,11 @@
     
     <div class="col-md-6 d-flex justify-content-center align-items-start">
       <div *ngIf="selectedSerie" class="card" style="width: 18rem;">
-        <img [src]="selectedSerie.image" class="card-img-top" [alt]="selectedSerie.name">
+        <img [src]="selectedSerie.poster" class="card-img-top" [alt]="selectedSerie.name">
         <div class="card-body">
           <h5 class="card-title">{{ selectedSerie.name }}</h5>
           <p class="card-text">{{ selectedSerie.description }}</p>
-          <a [href]="selectedSerie.link" class="btn btn-primary" target="_blank">More Info</a>
+          <a [href]="selectedSerie.webpage" class="btn btn-primary" target="_blank">More Info</a>
         </div>
       </div>
     </div>
