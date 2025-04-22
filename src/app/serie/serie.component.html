@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+    
+    <div class="col-md-6">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="h4">#</th>
+            <th class="h4">Name</th>
+            <th class="h4">Channel</th>
+            <th class="h4">Season</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-secondary" *ngFor="let c of series">
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.channel}}</td>
+            <td>{{c.seasons}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Seasons Average: {{ promedio }}</p>
+    </div>
+
+    
+    <div class="col-md-6 d-flex justify-content-center align-items-start">
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
