@@ -14,7 +14,7 @@
         <tbody>
           <tr class="table-secondary" *ngFor="let c of series">
             <td>{{c.id}}</td>
-            <td>{{c.name}}</td>
+            <td><a href="#" (click)="selectSerie(c)">{{ c.name }}</a></td>
             <td>{{c.channel}}</td>
             <td>{{c.seasons}}</td>
           </tr>
@@ -25,12 +25,12 @@
 
     
     <div class="col-md-6 d-flex justify-content-center align-items-start">
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+      <div *ngIf="selectedSerie" class="card" style="width: 18rem;">
+        <img [src]="selectedSerie.image" class="card-img-top" [alt]="selectedSerie.name">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">{{ selectedSerie.name }}</h5>
+          <p class="card-text">{{ selectedSerie.description }}</p>
+          <a [href]="selectedSerie.link" class="btn btn-primary" target="_blank">More Info</a>
         </div>
       </div>
     </div>
